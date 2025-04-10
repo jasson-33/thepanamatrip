@@ -1,0 +1,121 @@
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  padding-top: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.lightHeader {
+  background-color: #fff;
+  padding: 15px 0;
+}
+
+.activeHeader,
+.activeHeader.lightHeader {
+  background-color: transparent;
+}
+
+.containerHeader {
+  width: 90%;
+  max-width: 1600px;
+}
+
+.burgerMenu {
+  width: 35px;
+  height: 35px;
+  background-image: url(/images/general/menu.png);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.burgerMenu.opened {
+  background-image: url(/images/general/close.png);
+  transition: all 0.5s ease-in-out, 0.7s;
+}
+
+.contFilter {
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
+
+.citiesSelect {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 29px;
+  margin: 0 10px;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+.lightHeader .citiesSelect {
+  color: #3e3e3e;
+}
+
+.bigTitleHero {
+  font-size: 100px;
+}
+.subtitleHero {
+  font-size: 43px;
+}
+
+.innerContFilter {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  text-align: right;
+  padding-right: 60px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+.activeHeader .innerContFilter {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1px #00000073);
+}
+
+.logo img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .contFilter {
+    order: 2;
+    margin-top: 10px;
+  }
+  .innerContFilter {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+  .smallHero .citiesSelect {
+    margin: 0;
+  }
+
+  .containerHeader {
+    flex-wrap: wrap;
+  }
+
+  .citiesSelect {
+    margin: 0;
+  }
+}

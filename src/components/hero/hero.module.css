@@ -1,0 +1,588 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../../styles/fonts/Gotham-Book.otf');
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(/images/home/2.jpg); */
+  position: relative;
+  /* z-index: 1; */
+}
+
+.smallHero {
+  height: 70vh;
+}
+
+.withForm.hero {
+  margin-bottom: 50vh;
+}
+
+.containerHero {
+  height: 100%;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.contentHero {
+  width: 100%;
+  position: relative;
+}
+
+.withForm .contentHero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.principalText {
+  font-weight: 400;
+  font-size: 65px;
+  color: #fff;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+.subtitleText {
+  font-weight: 325;
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.subtitleHero {
+  font-style: normal;
+  font-weight: 325;
+  font-size: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.ctasHero {
+  margin-top: 100px;
+  position: relative;
+}
+
+.ctaHero {
+  margin-right: 50px;
+}
+
+.ctaLabelHero {
+  position: relative;
+}
+
+.ctaLabelHero:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 7px;
+  width: 0%;
+  border: solid 2px #d23250;
+  border-color: #d23250 transparent transparent transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.25s linear, opacity 0s linear 0.25s;
+}
+
+.ctaHero:hover .ctaLabelHero:after {
+  width: 100%;
+  opacity: 1;
+  transition: all 0.25s linear, opacity 0s linear 0s;
+}
+
+.ctaHero:hover .iconCtaHero {
+  transform: scale(1.1);
+}
+
+.ctaHero a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  gap: 20px;
+}
+
+.iconCtaHero {
+  width: 40px;
+  height: 40px;
+  background-image: url(/images/general/arrow-white-cta.png);
+  background-color: #d23250;
+  border-radius: 50%;
+  background-size: 80%;
+  transform: scale(1);
+  transition: all 0.25s linear;
+}
+
+.bigTitleHero {
+  font-weight: 400;
+  font-size: 130px;
+  line-height: 1.1;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 12px #00000075;
+}
+
+.instanBookingHero .bigTitleHero {
+  margin-bottom: 30px;
+  line-height: 1;
+  font-size: 90px;
+  text-shadow: 0px 0px 5px #00000055;
+}
+
+.heroForm {
+  background-color: #d23250;
+  color: #fff;
+  padding: 70px 50px;
+  width: 50%;
+  margin-bottom: -25%;
+}
+
+.titleFormHero {
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 77px;
+  margin-bottom: 20px;
+}
+
+.textHeroForm {
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+
+.inputHeroForm {
+  width: 100%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+}
+
+.inputHeroForm::placeholder {
+  color: #fff;
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 325;
+  font-size: 22px;
+  line-height: 16px;
+}
+
+.messageHero {
+  aspect-ratio: 4/1.5;
+}
+
+.submitHeroForm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.arrowForm {
+  background-color: #fff;
+  background-image: url(/images/general/arrow-red-cta.png);
+  background-size: 60%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sendText {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+}
+
+.imageInnerHero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.imageInnerHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 1, 3);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 1, 3, 0.6895133053221288) 0%,
+    rgba(0, 1, 3, 0) 51%
+  );
+}
+
+.smallHero .contFilter {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+}
+
+.smallHero .citiesSelect {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 29px;
+  margin: 0 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.postHero .bigTitleHero {
+  font-size: 100px;
+}
+.postHero .subtitleHero {
+  font-size: 43px;
+}
+
+.innerContFilter {
+  position: relative;
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+  text-align: right;
+  padding-right: 60px;
+}
+
+.videoBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroParagraph {
+  text-align: center;
+  color: #fff;
+  max-width: 50%;
+  margin: 0 auto 10px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.bookingButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.bookingButton {
+  border: 1px solid #d23250;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #fff;
+  min-width: 200px;
+  font-weight: 700;
+  color: #d23250;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bookingButton span {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  transition: all 0.25s linear;
+}
+
+.bookingButton:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: all 0.25s linear;
+}
+
+.question:before {
+  background-color: #d23250;
+}
+
+.bookingButton:hover:before {
+  left: 0;
+}
+
+.question:hover span {
+  color: #fff;
+}
+
+.bookNow {
+  background-color: #d23250;
+  color: #fff;
+}
+
+.bookNow:before {
+  background-color: #fff;
+}
+
+.bookNow:hover span {
+  color: #d23250;
+}
+
+@media only screen and (max-width: 1600px) {
+  .postHero .bigTitleHero {
+    margin-bottom: 0;
+    font-size: 75px;
+  }
+
+  .containerHero {
+    padding-bottom: 50px;
+  }
+
+  .bigTitleHero {
+    font-size: 100px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .heroParagraph {
+    max-width: 60%;
+  }
+
+  .containerHero {
+    padding-bottom: 40px;
+  }
+
+  .principalText {
+    font-size: 55px;
+  }
+
+  .subtitleText {
+    font-size: 25px;
+  }
+
+  .ctaHero a {
+    font-size: 17px;
+  }
+
+  .iconCtaHero {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+
+  .bigTitleHero {
+    font-size: 90px;
+    line-height: 95px;
+    margin-bottom: 0;
+  }
+
+  .subtitleHero {
+    font-size: 30px;
+  }
+
+  .postHero .bigTitleHero {
+    font-size: 80px;
+    line-height: 1.1;
+  }
+  .postHero .subtitleHero {
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .heroParagraph {
+    max-width: 70%;
+  }
+
+  .containerHero {
+    padding-bottom: 20px;
+  }
+
+  .principalText {
+    font-size: 50px;
+  }
+  .subtitleText {
+    font-size: 23px;
+  }
+
+  .ctasHero {
+    margin-top: 70px;
+  }
+
+  .ctaHero a {
+    font-size: 16px;
+  }
+  .titleFormHero {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .heroParagraph {
+    max-width: 80%;
+  }
+
+  .principalText {
+    font-size: 45px;
+  }
+
+  .subtitleText {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .ctasHero.ctasHero {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  .ctaHero {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ctaHero a {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 19px;
+    letter-spacing: 0.16em;
+  }
+  .heroPageForm {
+    height: auto;
+  }
+  .heroPageForm .contentHero {
+    display: block;
+    margin-top: 30vh;
+  }
+  .heroPageForm .heroForm {
+    width: 100%;
+    padding: 30px 30px;
+    margin-bottom: 0;
+  }
+  .heroPageForm .titleFormHero {
+    width: 100%;
+    font-size: 45px;
+  }
+  .heroPageForm.withForm.hero {
+    margin-bottom: 0;
+  }
+  .heroPageForm .imageInnerHero {
+    height: 50vh;
+  }
+  .postHero .bigTitleHero {
+    font-size: 44px;
+    line-height: 1;
+  }
+  .postHero .subtitleHero {
+    font-size: 27px;
+    line-height: 1.1;
+  }
+  .smallHero .contFilter {
+    top: 75px;
+  }
+  .innerContFilter {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+  }
+  .smallHero .citiesSelect {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .heroParagraph {
+    max-width: 90%;
+  }
+
+  .secondaryHero {
+    height: 50vh;
+  }
+
+  .secondaryHero .subtitleHero {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .secondaryHero .bigTitleHero {
+    line-height: 1;
+    font-size: 40px;
+  }
+
+  .bigTitleHero {
+    font-size: 60px;
+  }
+
+  .heroPageForm {
+    height: auto;
+  }
+  .heroPageForm .contentHero {
+    display: block;
+    margin-top: 30vh;
+  }
+  .heroPageForm .heroForm {
+    width: 100%;
+    padding: 30px 30px;
+    margin-bottom: 0;
+  }
+  .heroPageForm .titleFormHero {
+    width: 100%;
+    font-size: 45px;
+  }
+  .heroPageForm.withForm.hero {
+    margin-bottom: 0;
+  }
+  .heroPageForm .imageInnerHero {
+    height: 50vh;
+  }
+
+  .instanBookingHero {
+    height: auto;
+    padding: 20vh 0 15px;
+  }
+
+  .instanBookingHero .bigTitleHero {
+    font-size: 50px;
+  }
+
+  .instanBookingHero .heroParagraph {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .instanBookingHero .bookingButtons {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .bookingButton {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}

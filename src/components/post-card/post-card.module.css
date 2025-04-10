@@ -1,0 +1,136 @@
+.postCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.postCard a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.containerImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.containerImg img {
+  object-fit: cover;
+  transform: scale(1.2);
+  filter: grayscale(0.5);
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.postCard:hover img {
+  transform: scale(1);
+  filter: grayscale(0);
+}
+
+.infoPost {
+  width: 100%;
+  padding: 25px 15px;
+  background-color: #d23250;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoPost:after {
+  content: '';
+  position: absolute;
+  transform: skew(335deg);
+  background-color: #fff;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: -40%;
+  opacity: 0.4;
+}
+
+/* .postCard:hover .infoPost:after {
+  animation: shine .7s ease;
+} */
+
+@keyframes shine {
+  0% {
+    left: -40%;
+  }
+
+  to {
+    left: 140%;
+  }
+}
+
+.datePost {
+  font-size: 18px;
+  line-height: 16px;
+  /* color: rgba(255, 255, 255, 0.6); */
+}
+
+.titlePost {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+
+.typePost {
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 16px;
+  /* color: rgba(255, 255, 255, 0.6); */
+}
+
+.contParentCatPost {
+  height: 40vh;
+}
+
+.catPageStyle {
+  height: auto;
+  aspect-ratio: 1 / 1.1;
+}
+.catPageStyle .infoPost {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+  .datePost,
+  .typePost {
+    font-size: 16px;
+  }
+  .titlePost {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* .popularViewBlock.postCard{
+    width: 48%!important;
+  }
+  .containerPrincipalPost .postCard {
+    width: 100%!important;
+  } */
+}
+@media only screen and (max-width: 768px) {
+  .postCard {
+    display: block;
+    width: 100% !important;
+  }
+  .containerImg {
+    height: 300px;
+  }
+  .postCard {
+    display: grid;
+    grid-column: 1;
+  }
+  .catPageStyle {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}

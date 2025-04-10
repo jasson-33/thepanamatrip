@@ -1,0 +1,30 @@
+.containerLegacy {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 50px 0;
+}
+
+.containerLegacy p,
+.containerLegacy ul {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.containerLegacy p strong {
+  font-weight: bold;
+}
+
+.containerLegacy ul,
+.containerLegacy ol {
+  padding-left: 20px;
+  margin-top: 20px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.containerLegacy li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}

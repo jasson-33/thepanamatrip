@@ -1,0 +1,161 @@
+.teamSection {
+  padding-bottom: 100px;
+}
+
+.containerTeam {
+  flex-wrap: wrap;
+  position: relative;
+  gap: 70px 20px;
+  align-items: stretch;
+}
+
+.cardTeam {
+  width: calc(33.33333% - 20px);
+  text-align: center;
+}
+
+.imgTeamMember {
+  width: 100%;
+  position: relative;
+  height: auto;
+  aspect-ratio: 1 / 1.5;
+}
+
+.hideInfo {
+  position: relative;
+  width: 100%;
+  background-color: #d23250;
+  color: #fff;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  /* padding: 50px 30px; */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.cardTeam:hover .hideInfo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.infoTeamMember {
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 28px;
+  /* margin-bottom: 30px; */
+  width: 100%;
+  min-height: 100%;
+  /* overflow: auto; */
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.innerImgTeamMember {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamMemberName {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 41px;
+  color: #3e3e3e;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px 0;
+}
+
+.teamMemberRol {
+  font-weight: 325;
+  font-size: 26px;
+  line-height: 30px;
+  color: #3e3e3e;
+}
+
+@media only screen and (max-width: 1350px) {
+  .teamMemberName {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+
+  .teamMemberRol {
+    font-size: 23px;
+  }
+
+  .hideInfo {
+    /* padding: 30px; */
+  }
+
+  .infoTeamMember {
+    font-size: 16px;
+    line-height: 20px;
+    /* margin-bottom: 20px; */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardTeam {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .teamSection {
+    padding-bottom: 0;
+  }
+
+  .containerTeam {
+    flex-direction: column;
+  }
+
+  .cardTeam {
+    width: 100%;
+    position: relative;
+  }
+
+  .innerImgTeamMember {
+    position: relative;
+    height: 40vh;
+  }
+
+  .hideInfo {
+    opacity: 1;
+    visibility: visible;
+    margin-top: -3px;
+    height: auto;
+  }
+
+  .contNameTeam {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+  }
+
+  .imgTeamMember {
+    aspect-ratio: auto;
+  }
+
+  .teamMemberName,
+  .teamMemberRol {
+    color: #fff;
+  }
+
+  .teamMemberRol {
+    margin-bottom: 20px;
+  }
+}

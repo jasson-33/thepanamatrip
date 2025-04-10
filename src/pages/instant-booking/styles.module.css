@@ -1,0 +1,92 @@
+.stickyBooking {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: calc(100% - 88px);
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 2;
+  margin-top: 90vh;
+  margin-bottom: -90vh;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.09);
+}
+
+.textStickyBooking {
+  color: #3e3e3e;
+  font-size: 26px;
+}
+
+.bookingButtons {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookingButton {
+  border: 1px solid #d23250;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #fff;
+  min-width: 200px;
+  font-weight: 700;
+  color: #d23250;
+  text-align: center;
+}
+
+.bookNow {
+  background-color: #d23250;
+  color: #fff;
+}
+
+.outerGrid {
+  padding: 10vh 0;
+}
+
+@media only screen and (max-width: 1300px) {
+  .textStickyBooking {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .textStickyBooking {
+    font-size: 18px;
+  }
+
+  .bookingButton {
+    font-size: 14px;
+    min-width: 180px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .textStickyBooking {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .stickyBooking {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 20px;
+    top: calc(100% - 58px);
+  }
+
+  .bookingButtons {
+    gap: 10px;
+  }
+  .bookingButton {
+    width: 100%;
+  }
+}

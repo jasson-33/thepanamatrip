@@ -1,0 +1,71 @@
+.titleTextBlock {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2.5vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.titleBlock {
+  color: #3e3e3e;
+  text-align: center;
+  font-size: 80px;
+  font-style: normal;
+  line-height: 1;
+  width: 50%;
+  margin: 0 auto 30px;
+}
+
+.paragraphText {
+  color: #3e3e3e;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 50%;
+  margin: 0 auto 50px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .titleBlock {
+    width: 80%;
+    font-size: 60px;
+  }
+  .paragraphText {
+    max-width: 70%;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .titleBlock {
+    font-size: 50px;
+  }
+  .paragraphText {
+    max-width: 80%;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .titleBlock {
+    width: 100%;
+  }
+
+  .paragraphText {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .titleBlock {
+    font-size: 35px;
+  }
+
+  .paragraphText {
+    font-size: 14px;
+  }
+}

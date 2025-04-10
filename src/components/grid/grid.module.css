@@ -1,0 +1,59 @@
+.gridSection {
+  margin-bottom: 100px;
+}
+
+.gridContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.gridItem {
+  width: 33.333333%;
+  /* aspect-ratio: 1/1.3; */
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.titleItemGrid {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 41px;
+  margin-bottom: 30px;
+}
+
+.infoGridItem,
+.infoGridItem p {
+  margin: 0px 0 50px;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+    flex-direction: column;
+  }
+  .gridItem {
+    width: 100%;
+    height: 60vh;
+    padding: 50px 5% 0;
+  }
+  .gridDescItem {
+    height: auto;
+  }
+  .gridSection {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .gridItem {
+    width: 100%;
+    height: 40vh;
+    padding: 50px 5% 0;
+  }
+  .gridDescItem {
+    height: auto;
+  }
+}

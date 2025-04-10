@@ -1,0 +1,23 @@
+.contentDateBlog {
+  width: 90%;
+  margin: 30px auto 80px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.innerContSubtitle {
+  width: 70%;
+  margin: 50px auto;
+  font-size: 25px;
+  max-width: 1400px;
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 768px) {
+  .contentDateBlog {
+    margin: 30px auto 50px;
+  }
+  .innerContSubtitle {
+    width: 80%;
+  }
+}

@@ -1,0 +1,218 @@
+.acordionSection {
+  padding: 100px 0;
+}
+
+.acordionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemExperience {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #000;
+  padding: 0 30px;
+}
+
+.topItem {
+  width: 100%;
+  position: relative;
+  padding: 30px 0;
+  cursor: pointer;
+}
+
+.cityExperience {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 32px;
+  color: #3e3e3e;
+}
+
+.toggleExpand {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-image: url(/images/general/more.png);
+  background-size: 80%;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: all 0s ease-in-out;
+}
+
+.active .toggleExpand {
+  background-image: url(/images/general/menos.png);
+}
+
+.stepsExperience {
+  width: 100%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.active .stepsExperience {
+  transition: all 1s linear;
+}
+
+.singleStep {
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.singleStep.invert {
+  flex-direction: row-reverse;
+}
+
+.imgStep {
+  width: 100%;
+  height: 90vh;
+}
+
+.outerImgStep {
+  width: 40%;
+}
+
+.infoStep {
+  padding-top: 50px;
+  width: 50%;
+}
+
+.infoDay {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  color: #3e3e3e;
+  /*text-transform: uppercase;*/
+  margin-bottom: 30px;
+}
+
+.featuresDay {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  gap: 10px;
+  position: relative;
+  width: calc(50% - 20px);
+}
+
+.iconFeature {
+  width: 35px;
+  height: 35px;
+  background-color: #d23250;
+  background-size: 60%;
+  border-radius: 50%;
+}
+
+.featureText {
+  width: calc(100% - 50px);
+}
+
+.subtitleDay {
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+
+.infoTextDay {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 29px;
+  color: #3e3e3e;
+}
+
+.smallInfoImg {
+  font-size: 12px;
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.singleStep.invert .smallInfoImg {
+  text-align: left;
+}
+
+@media only screen and (max-width: 1350px) {
+  .cityExperience {
+    font-size: 40px;
+  }
+
+  .toggleExpand {
+    width: 40px;
+    height: 40px;
+  }
+
+  .singleStep {
+    margin-bottom: 120px;
+  }
+
+  .infoDay {
+    font-size: 30px;
+  }
+
+  .subtitleDay {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  .infoTextDay {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+
+  .outerImgStep {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .singleStep {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .infoStep {
+    width: 100%;
+  }
+  .featuresDay {
+    flex-direction: column;
+  }
+  .feature {
+    width: 100%;
+  }
+  .outerImgStep {
+    width: 100%;
+  }
+  .imgStep {
+    width: 100%;
+    height: 60vh;
+  }
+  .singleStep.invert {
+    flex-direction: column;
+  }
+  .itemExperience.active {
+    padding-bottom: 30px;
+  }
+  .cityExperience {
+    width: 80%;
+    font-size: 30px;
+  }
+
+  .itemExperience {
+    padding: 0px;
+  }
+
+  .toggleExpand {
+    width: 30px;
+    height: 30px;
+  }
+}

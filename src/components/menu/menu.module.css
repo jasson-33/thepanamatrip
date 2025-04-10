@@ -1,0 +1,109 @@
+.siteMenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.siteMenu.active {
+  opacity: 1;
+}
+
+.leftMenu {
+  width: 50%;
+  height: 100%;
+  background-image: url(/images/menu/23.jpg);
+  background-position: left center;
+  position: relative;
+}
+
+.leftMenu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000040;
+}
+
+.rightMenu {
+  width: 50%;
+  height: 100%;
+  background-color: #d23250;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 7%;
+}
+
+.halfFace.halfFace {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 70%;
+  background-image: url(/images/general/face.png);
+  background-position: right center;
+}
+
+.ulMenu {
+  position: relative;
+}
+
+.itemMenu {
+  display: flex;
+  align-items: flex-start;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.numberItemMenu {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.itemMenu a {
+  display: flex;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.itemMenu:hover {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1350px) {
+  .itemMenu {
+    font-size: 33px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .leftMenu {
+    display: none;
+  }
+  .rightMenu {
+    width: 100%;
+  }
+  .itemMenu {
+    font-size: 50px;
+  }
+  .halfFace.halfFace {
+    width: 100%;
+    height: 25vh;
+    background-image: url(/images/general/face-3.png);
+    background-position: center center;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .itemMenu {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+}

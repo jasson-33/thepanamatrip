@@ -1,0 +1,122 @@
+.infoRecomendation {
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+  padding: 100px 0px;
+}
+
+.infoRecomendContainer {
+  position: relative;
+  width: 100%;
+  max-width: initial;
+}
+
+.controllersContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.controller {
+  cursor: pointer;
+  padding: 20px 50px 25px;
+  /* text-transform: uppercase; */
+  background-color: #fff;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+.controller.active {
+  background-color: #d23250;
+  color: #fff;
+}
+
+.iconController {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.infoIcon {
+  background-image: url(/images/general/information-gray.png);
+}
+
+.controller.active .infoIcon {
+  background-image: url(/images/general/information-white.png);
+}
+
+.recomendIcon {
+  background-image: url(/images/general/recommendation-gray.png);
+}
+
+.controller.active .recomendIcon {
+  background-image: url(/images/general/recommendation-white.png);
+}
+
+.innerInfo {
+  position: relative;
+  width: 100%;
+  background-color: #d23250;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.containerInnerInfo {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.containerInnerInfo h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
+  /* text-transform: uppercase; */
+}
+
+.containerInnerInfo ul,
+.containerInnerInfo ol {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 325;
+  font-size: 18px;
+  line-height: 29px;
+  padding-left: 25px;
+}
+
+.containerInnerInfo li {
+  list-style: disc;
+}
+
+@media only screen and (max-width: 1350px) {
+  .subtitleInnerInfo {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .ulInnerInfo {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .infoRecomendation {
+    margin-bottom: 0;
+  }
+  .controller {
+    height: 110px;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}

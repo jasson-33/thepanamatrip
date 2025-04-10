@@ -1,0 +1,24 @@
+.imgSection {
+  width: 100%;
+  height: 70vh;
+  background-attachment: fixed;
+  margin-bottom: 10vh;
+}
+
+.imgSection.bigImgSection {
+  height: 100vh;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .imgSection {
+    background-attachment: initial;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .imgSection,
+  .imgSection.bigImgSection {
+    height: 40vh;
+  }
+}

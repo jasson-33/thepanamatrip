@@ -1,0 +1,87 @@
+
+.calendarContainer {
+  position: relative;
+}
+
+.calendarTitle {
+  max-width: 45%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.calendarInfo {
+  text-align: center;
+  font-size: 22px;
+}
+
+.calendarIframe {
+  width: 100%;
+  height: var(--heightdesk);
+  display: block;
+  margin: 5vh auto 0;
+}
+
+@media only screen and (max-width: 1350px) {
+  .calendarTitle {
+    max-width: 55%;
+    font-size: 50px;
+  }
+
+  .calendarInfo {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .calendarIframe {
+    height: var(--heightdesk);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .calendarTitle {
+    max-width: 60%;
+    font-size: 50px;
+  }
+
+  .calendarInfo {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .calendarIframe {
+    height: var(--heightdesk);
+  }
+}
+@media only screen and (max-width: 728px) {
+  .calendarTitle {
+    max-width: 90%;
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .calendarIframe {
+    height: var(--heightmob);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .calendarSection {
+    padding: 15vh 0 0;
+  }
+
+  .calendarTitle {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .calendarInfo {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .calendarIframe {
+    height: var(--heightmob);
+  }
+}

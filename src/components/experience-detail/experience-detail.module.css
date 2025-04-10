@@ -1,0 +1,79 @@
+.experienceDetailSection {
+  padding: 0 0 100px;
+}
+
+.containerExperiencesDetail {
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+
+.cardExperience {
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgCardExperience {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
+  transition: all 3s linear 0s;
+}
+
+.cardExperience:hover .imgCardExperience {
+  transform: scale(1);
+}
+
+.atroposExperience {
+  width: 100%;
+  height: 100%;
+}
+
+.titleCard {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 1.05;
+  color: #ffffff;
+  text-shadow: 0 2px 0px rgba(0, 0, 0, 0.618);
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: calc(100% - 60px);
+  transition: all 0.5s ease-in-out;
+}
+
+.cardExperience:hover .titleCard {
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1350px) {
+  .titleCard {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .titleCard {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cardExperience {
+    width: 100% !important;
+    height: 70vh;
+  }
+  .titleCard {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .experienceDetailSection {
+    padding: 0;
+  }
+
+  .titleCard {
+    font-size: 33px;
+    line-height: 45px;
+  }
+}

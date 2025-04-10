@@ -1,0 +1,385 @@
+/* @import url(./fonts/Bigola-Display-Regular.ttf);
+@import url(./fonts/Gotham-Bold.otf);
+@import url(./fonts/Gotham-Book.otf); */
+@font-face {
+  font-family: 'Bigola';
+  src: url('./fonts/Bigola-Display-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('./fonts/Gotham-Bold.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('./fonts/Gotham-Book.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+  color: #000;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.bg-ct {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.bg-complete {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.bg-cv {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-c {
+  justify-content: center;
+}
+.f-s {
+  justify-content: flex-start;
+}
+.f-e {
+  justify-content: flex-end;
+}
+.f-sb {
+  justify-content: space-between;
+}
+.f-sa {
+  justify-content: space-around;
+}
+.f-ac {
+  align-items: center;
+}
+
+.f-as {
+  align-items: flex-start;
+}
+.f-ae {
+  align-items: flex-end;
+}
+
+.siteMain {
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.siteSection {
+  width: 100%;
+  position: relative;
+}
+
+.iconPhone {
+  width: 40px;
+  height: 40px;
+  min-width: 35px;
+  min-height: 35px;
+  background-color: #d23250;
+  border-radius: 50%;
+  background-image: url(/images/general/phone.png);
+  background-size: 70%;
+}
+.iconMail {
+  width: 40px;
+  height: 40px;
+  min-width: 35px;
+  min-height: 35px;
+  background-color: #d23250;
+  border-radius: 50%;
+  background-image: url(/images/general/email.png);
+  background-size: 70%;
+}
+
+.captureClick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contAllCatPosts .postCard {
+  height: 40vh;
+}
+
+.containerLegacy {
+  font-family: 'Gotham Book', serif;
+  line-height: 1.3;
+}
+.containerLegacy strong {
+  font-family: 'Gotham Bold', serif;
+  margin: 20px 0;
+  display: block;
+  text-transform: uppercase;
+}
+
+.custom404Section {
+  padding: 20vh 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container404 {
+  text-align: center;
+}
+
+.title404 {
+  color: #3e3e3e;
+  font-family: 'Bigola';
+  font-size: 250px;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0 0 5px #3e3e3e55;
+}
+
+.title404 > div > span span {
+  display: inline-block;
+}
+
+.pageNotFoundText {
+  color: #3e3e3e;
+  font-family: 'Gotham Book';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 325;
+  margin-bottom: 100px;
+}
+
+.ctaHero {
+  margin-right: 50px;
+}
+
+.ctaLabelHero {
+  position: relative;
+  color: #3e3e3e;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.7);
+  font-family: 'Gotham Book';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  margin-left: 20px;
+}
+
+.ctaLabelHero:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 7px;
+  width: 0%;
+  border: solid 2px #d23250;
+  border-color: #d23250 transparent transparent transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.25s linear, opacity 0s linear 0.25s;
+}
+
+.iconCtaHero {
+  width: 40px;
+  height: 40px;
+  background-image: url(/images/general/arrow-white-cta.png);
+  background-color: #d23250;
+  border-radius: 50%;
+  background-size: 80%;
+  transform: scale(1);
+  transition: all 0.25s linear;
+}
+
+.returnHome {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* .transparent{
+  background-color: transparent !important;
+} */
+
+@media only screen and (max-width: 1300px) {
+  .iconPhone {
+    width: 35px;
+    height: 35px;
+  }
+
+  .title404 {
+    font-size: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .title404 {
+    font-size: 150px;
+  }
+  .iconCtaHero {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .title404 {
+    font-size: 125px;
+  }
+}

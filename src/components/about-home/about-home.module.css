@@ -1,0 +1,150 @@
+.aboutHome {
+  padding: 250px 0;
+}
+
+.containerAboutHome {
+  align-items: stretch;
+  gap: 50px;
+}
+
+.leftAboutHome {
+  position: relative;
+  width: 50%;
+  padding-bottom: 70px;
+}
+
+.titleAbout {
+  font-weight: 400;
+  font-size: 95px;
+  color: #3e3e3e;
+  margin-bottom: 70px;
+}
+
+.subtitleAbout {
+  font-weight: 700;
+  font-size: 25px;
+  color: #3e3e3e;
+}
+
+.paragraphsGroup {
+  width: 50%;
+  margin-left: auto;
+  margin-top: 120px;
+}
+
+.paragraphAbout {
+  font-weight: 325;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.paragraphAbout:first-of-type {
+  margin-bottom: 50px;
+}
+
+.rightAboutHome {
+  width: 40%;
+}
+
+.imageAboutHome {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .aboutHome {
+    padding: 150px 0;
+  }
+  .titleAbout {
+    font-size: 60px;
+  }
+
+  .subtitleAbout {
+    font-size: 23px;
+  }
+
+  .paragraphsGroup {
+    width: 60%;
+    margin-top: 80px;
+  }
+
+  .paragraphAbout {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .aboutHome {
+    padding: 125px 0;
+  }
+  .titleAbout {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .subtitleAbout {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .paragraphsGroup {
+    margin-top: 60px;
+    width: 70%;
+  }
+
+  .paragraphAbout:first-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .containerAboutHome {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .leftAboutHome {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .imageAboutHomeMobile {
+    aspect-ratio: 1/1.7;
+    width: 70%;
+    margin-left: auto;
+  }
+  .titleAbout {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .subtitleAbout {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .aboutHome {
+    padding: 80px 0;
+  }
+
+  .containerImgText {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .imageAboutHomeMobile {
+    width: 80%;
+  }
+  .paragraphsGroup {
+    margin-top: 20px;
+    width: 80%;
+  }
+  .aboutHome {
+    padding: 80px 0 10px;
+  }
+  .titleAbout {
+    width: 80%;
+  }
+}
