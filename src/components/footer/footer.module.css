@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Gotham';
-  src: url('../../styles/fonts/Gotham-Book.otf');
+  font-family: "Gotham";
+  src: url("../../styles/fonts/Gotham-Book.otf");
 }
 .siteContact.siteContact {
   width: 100%;
   padding: 100px 0;
   padding-bottom: 85vh;
-  background-image: url(/images/footer/15.jpg);
+  background-image: url(/images/footer/16.png);
   background-position: bottom center;
   position: relative;
   overflow: hidden;
@@ -26,7 +26,7 @@
   color: #3e3e3e;
 }
 .siteContact::before {
-  content: '';
+  content: "";
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -93,6 +93,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #ffffff;
+  padding: 2rem;
 }
 
 .filedForm {
@@ -125,7 +127,7 @@
   font-size: 22px;
   line-height: 16px;
   color: rgba(62, 62, 62, 0.7);
-  font-family: 'Gotham';
+  font-family: "Gotham";
 }
 
 .textareaForm {
@@ -367,7 +369,7 @@
 }
 
 .submitText:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 0;

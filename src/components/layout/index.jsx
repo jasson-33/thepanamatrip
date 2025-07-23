@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../header';
-import Menu from '../menu';
-import { useContext } from 'react';
-import { ColombianContext } from '@/context/ColombianContext';
-import Footer from '../footer';
-import { useRouter } from 'next/router';
+import React, { useEffect, useState } from "react";
+import Header from "../header";
+import Menu from "../menu";
+import { useContext } from "react";
+import { ColombianContext } from "@/context/ColombianContext";
+import Footer from "../footer";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
   const the_categories = children.props.data.categoriesfilter
     ? children.props.data.categoriesfilter
     : false;
-  const currCategory = router.query ? router.query.id : '/meet-colombia';
+  const currCategory = router.query ? router.query.id : "/meet-colombia";
 
   return (
     <main className={`siteMain ${Gotham.className}`}>
@@ -51,14 +51,14 @@ const Layout = ({ children }) => {
       {showMenu ? (
         <Menu animate={animate} setAnimate={setAnimate} mainmenu={dataMenu} />
       ) : (
-        ''
+        ""
       )}
       {children}
       <Footer
         datafooter={dataFooter}
-        changeLayout={router.pathname === '/how-it-works'}
+        changeLayout={router.pathname === "/how-it-works"}
         noforms={
-          router.pathname === '/b2b' || router.pathname.startsWith('/thank-you')
+          router.pathname === "/b2b" || router.pathname.startsWith("/thank-you")
         }
       />
     </main>

@@ -1,10 +1,10 @@
-import { ColombianContext } from '@/context/ColombianContext';
-import Link from 'next/link';
-import React, { useContext, useEffect } from 'react';
-import styles from './footer.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useRouter } from 'next/router';
+import { ColombianContext } from "@/context/ColombianContext";
+import Link from "next/link";
+import React, { useContext, useEffect } from "react";
+import styles from "./footer.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useRouter } from "next/router";
 
 const Footer = ({ datafooter, changeLayout, noforms }) => {
   const {
@@ -35,53 +35,53 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
   }, [pathname]);
 
   const theMonths = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const sendDataForm = async (event) => {
     event.preventDefault();
-    const name = event.target.querySelector('#f_name').value;
-    const email = event.target.querySelector('#f_email').value;
-    const message = event.target.querySelector('#f_message').value;
+    const name = event.target.querySelector("#f_name").value;
+    const email = event.target.querySelector("#f_email").value;
+    const message = event.target.querySelector("#f_message").value;
 
     if (!name) {
-      alert('Please enter your name.');
+      alert("Please enter your name.");
       return false;
     }
 
     if (!email) {
-      alert('Please enter your Email.');
+      alert("Please enter your Email.");
       return false;
     }
 
     if (!message) {
-      alert('Please enter your Message.');
+      alert("Please enter your Message.");
       return false;
     }
 
     const formData = {
-      'fname': name,
-      'femail': email,
-      'fmessage': message,
+      fname: name,
+      femail: email,
+      fmessage: message,
     };
 
     // const endpoint = `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/contact-footer-full`;
-    const endpoint = '/api/send-form';
+    const endpoint = "/api/send-form";
 
     const options = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     };
 
@@ -90,9 +90,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
     const result = await response.json();
 
     if (result.status) {
-      let redirectTo = pathname.split('/')[1];
-      if (redirectTo === '') {
-        redirectTo = 'homepage';
+      let redirectTo = pathname.split("/")[1];
+      if (redirectTo === "") {
+        redirectTo = "homepage";
       }
       window.location.href = `/thank-you-${redirectTo}`;
     }
@@ -100,92 +100,92 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
 
   const sendDataFormFull = async (event) => {
     event.preventDefault();
-    const firstname = event.target.querySelector('#first_name_form').value;
-    const lastname = event.target.querySelector('#last_name_form').value;
-    const email = event.target.querySelector('#email_form').value;
-    const duration = event.target.querySelector('#duration_days').value;
+    const firstname = event.target.querySelector("#first_name_form").value;
+    const lastname = event.target.querySelector("#last_name_form").value;
+    const email = event.target.querySelector("#email_form").value;
+    const duration = event.target.querySelector("#duration_days").value;
     const numbertravelers =
-      event.target.querySelector('#number_travelers').value;
-    const datemonth = event.target.querySelector('#start_date_month').value;
-    const dateday = event.target.querySelector('#start_date_day').value;
-    const dateyear = event.target.querySelector('#start_date_year').value;
-    const styletravel = event.target.querySelector('#travel_style').value;
+      event.target.querySelector("#number_travelers").value;
+    const datemonth = event.target.querySelector("#start_date_month").value;
+    const dateday = event.target.querySelector("#start_date_day").value;
+    const dateyear = event.target.querySelector("#start_date_year").value;
+    const styletravel = event.target.querySelector("#travel_style").value;
     const accomodationtravel =
-      event.target.querySelector('#accomodation_form').value;
+      event.target.querySelector("#accomodation_form").value;
     const destinationtravel =
-      event.target.querySelector('#destination_form').value;
-    const message = event.target.querySelector('#comments_form').value;
+      event.target.querySelector("#destination_form").value;
+    const message = event.target.querySelector("#comments_form").value;
 
     if (!firstname) {
-      alert('Please enter your first name.');
+      alert("Please enter your first name.");
       return false;
     }
     if (!lastname) {
-      alert('Please enter your last name.');
+      alert("Please enter your last name.");
       return false;
     }
     if (!email) {
-      alert('Please enter your Email.');
+      alert("Please enter your Email.");
       return false;
     }
     if (!duration) {
-      alert('Please enter your estimated duration.');
+      alert("Please enter your estimated duration.");
       return false;
     }
     if (!numbertravelers) {
-      alert('Please enter the estimated numer of travelers.');
+      alert("Please enter the estimated numer of travelers.");
       return false;
     }
     if (!datemonth) {
-      alert('Please enter the month of travel.');
+      alert("Please enter the month of travel.");
       return false;
     }
     if (!dateday) {
-      alert('Please enter the day of travel.');
+      alert("Please enter the day of travel.");
       return false;
     }
     if (!dateyear) {
-      alert('Please enter the year of travel.');
+      alert("Please enter the year of travel.");
       return false;
     }
     if (!styletravel) {
-      alert('Please select your travel style.');
+      alert("Please select your travel style.");
       return false;
     }
     if (!accomodationtravel) {
-      alert('Please select the accomodation.');
+      alert("Please select the accomodation.");
       return false;
     }
     if (!destinationtravel) {
-      alert('Please select the destination.');
+      alert("Please select the destination.");
       return false;
     }
     if (!message) {
-      alert('Please enter a message.');
+      alert("Please enter a message.");
       return false;
     }
 
     const formData = {
-      'last_name': lastname,
-      'first_name': firstname,
+      last_name: lastname,
+      first_name: firstname,
       email,
       duration,
-      'number_travelers': numbertravelers,
-      'date_month': datemonth,
-      'date_day': dateday,
-      'date_year': dateyear,
-      'style_travel': styletravel,
-      'style_accomodation': accomodationtravel,
-      'style_destination': destinationtravel,
+      number_travelers: numbertravelers,
+      date_month: datemonth,
+      date_day: dateday,
+      date_year: dateyear,
+      style_travel: styletravel,
+      style_accomodation: accomodationtravel,
+      style_destination: destinationtravel,
       message,
     };
 
     // const endpoint = `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/contact-footer-full`;
-    const endpoint = '/api/send-form-full';
+    const endpoint = "/api/send-form-full";
 
     const options = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     };
 
@@ -194,9 +194,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
     const result = await response.json();
 
     if (result.status) {
-      let redirectTo = pathname.split('/')[1];
-      if (redirectTo === '') {
-        redirectTo = 'homepage';
+      let redirectTo = pathname.split("/")[1];
+      if (redirectTo === "") {
+        redirectTo = "homepage";
       }
       window.location.href = `/thank-you-${redirectTo}`;
     }
@@ -228,7 +228,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                           data-aos="fade-right"
                           data-aos-duration="900"
                           data-aos-delay="0"
-                          className="iconPhone bg-ct"></div>
+                          className="iconPhone bg-ct"
+                        ></div>
                         <div className={styles.phoneGroup}>
                           {phone.map((phoneObj, i) => (
                             <a
@@ -237,7 +238,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                               data-aos-duration="900"
                               data-aos-delay="0"
                               className={styles.contactCta}
-                              href={phoneObj.numlink}>
+                              href={phoneObj.numlink}
+                            >
                               {phoneObj.label}
                             </a>
                           ))}
@@ -250,7 +252,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                           data-aos="fade-right"
                           data-aos-duration="900"
                           data-aos-delay="0"
-                          className="iconMail bg-ct"></div>
+                          className="iconMail bg-ct"
+                        ></div>
                         <div className={styles.phoneGroup}>
                           {email.map((mailObj, i) => (
                             <a
@@ -259,7 +262,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                               data-aos-duration="900"
                               data-aos-delay="0"
                               className={styles.contactCta}
-                              href={mailObj.numlink}>
+                              href={mailObj.numlink}
+                            >
                               {mailObj.label}
                             </a>
                           ))}
@@ -293,12 +297,14 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       className={styles.lastInputsForm}
                       data-aos="fade-left"
                       data-aos-duration="900"
-                      data-aos-delay="0">
+                      data-aos-delay="0"
+                    >
                       <textarea
                         name=""
                         id="f_message"
                         className={`${styles.filedForm} ${styles.textareaForm}`}
-                        placeholder="Message"></textarea>
+                        placeholder="Message"
+                      ></textarea>
                       <p id="messageForm"></p>
                       <div className={styles.submitGroup}>
                         <button className={styles.innerSubmitGroup}>
@@ -314,29 +320,33 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
 
             {changeLayout && (
               <>
-                <div className={'container'}>
+                <div className={"container"}>
                   <h2
                     className={`${styles.titleProud} ${Bigola.className}`}
                     data-aos="fade-up"
                     data-aos-duration="900"
                     data-aos-delay="0"
-                    dangerouslySetInnerHTML={{ __html: formtitle }}></h2>
+                    dangerouslySetInnerHTML={{ __html: formtitle }}
+                  ></h2>
                   <h3
                     data-aos="fade-up"
                     data-aos-duration="900"
                     data-aos-delay="0"
                     className={styles.subtitleProudMembers}
-                    dangerouslySetInnerHTML={{ __html: formtext }}></h3>
+                    dangerouslySetInnerHTML={{ __html: formtext }}
+                  ></h3>
                 </div>
                 <form
                   className={`${styles.formFooterB} formB`}
-                  onSubmit={sendDataFormFull}>
+                  onSubmit={sendDataFormFull}
+                >
                   <div className={styles.inputsGroup}>
                     <p
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Name*
                     </p>
                     <input
@@ -365,7 +375,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Email*
                     </p>
                     <input
@@ -383,7 +394,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Approximated Duration Days
                     </p>
                     <input
@@ -401,7 +413,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Number of Travelers
                     </p>
                     <input
@@ -415,12 +428,14 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                     />
                   </div>
                   <div
-                    className={`${styles.inputsGroup} ${styles.shortGroup} ${styles.dateInput}`}>
+                    className={`${styles.inputsGroup} ${styles.shortGroup} ${styles.dateInput}`}
+                  >
                     <p
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Approximated Start date
                     </p>
                     <select
@@ -432,7 +447,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       name=""
                       id="start_date_month"
                       className={`${styles.filedForm} ${styles.inputForm} ${styles.selectMonth}`}
-                      placeholder="MM">
+                      placeholder="MM"
+                    >
                       <option value="default" selected disabled>
                         MM
                       </option>
@@ -470,7 +486,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Your Travel Style
                     </p>
                     <select
@@ -479,8 +496,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos-delay="0"
                       className={styles.selectInput}
                       name=""
-                      id="travel_style">
-                      <option key={'styles_def'} value="">
+                      id="travel_style"
+                    >
+                      <option key={"styles_def"} value="">
                         Select Your Travel Style
                       </option>
                       {styles_form &&
@@ -497,7 +515,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Accomodation
                     </p>
                     <select
@@ -506,8 +525,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos-delay="0"
                       className={styles.selectInput}
                       name=""
-                      id="accomodation_form">
-                      <option key={'accomodation_def'} value="">
+                      id="accomodation_form"
+                    >
+                      <option key={"accomodation_def"} value="">
                         Select Your Accomodation
                       </option>
                       {accomodations_form &&
@@ -524,7 +544,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Your Destination
                     </p>
                     <select
@@ -533,8 +554,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos-delay="0"
                       className={styles.selectInput}
                       name=""
-                      id="destination_form">
-                      <option key={'destination_def'} value="">
+                      id="destination_form"
+                    >
+                      <option key={"destination_def"} value="">
                         Select Your Destination
                       </option>
                       {destinations_form &&
@@ -552,7 +574,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       data-aos="fade-left"
                       data-aos-duration="900"
                       data-aos-delay="0"
-                      className={styles.labelTextInputs}>
+                      className={styles.labelTextInputs}
+                    >
                       Comments
                     </p>
                     <textarea
@@ -562,7 +585,8 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                       type="text"
                       name=""
                       id="comments_form"
-                      className={`${styles.filedForm} ${styles.inputForm} ${styles.textAreaFormB}`}></textarea>
+                      className={`${styles.filedForm} ${styles.inputForm} ${styles.textAreaFormB}`}
+                    ></textarea>
                   </div>
                   <p id="messageForm"></p>
                   <div className={styles.submitGroup}>
@@ -571,12 +595,14 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                         data-aos="fade-left"
                         data-aos-duration="900"
                         data-aos-delay="0"
-                        className={`${styles.arrowSubmit} bg-ct`}></div>
+                        className={`${styles.arrowSubmit} bg-ct`}
+                      ></div>
                       <p
                         data-aos="fade-left"
                         data-aos-duration="900"
                         data-aos-delay="0"
-                        className={styles.submitText}>
+                        className={styles.submitText}
+                      >
                         SUBMIT
                       </p>
                     </button>
@@ -602,8 +628,9 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                   key={`itemmenu${i}`}
                   target={item.target}
                   href={`${process.env.NEXT_PUBLIC_CURR_DOMAIN}${item.link}`}
-                  className={`${styles.itemFooterNav} ${styles.withPoint}`}>
-                  {item.label}{' '}
+                  className={`${styles.itemFooterNav} ${styles.withPoint}`}
+                >
+                  {item.label}{" "}
                   {i < footermenu.length - 1 && (
                     <span className={styles.divisorPoint}></span>
                   )}
@@ -611,19 +638,21 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
               ))}
             </nav>
           )}
-          {disclaimer !== '' && (
+          {disclaimer !== "" && (
             <p className={styles.infoRegister}>{disclaimer}</p>
           )}
           <div className={styles.legalItems}>
             <Link
               href={`${process.env.NEXT_PUBLIC_CURR_DOMAIN}${privacylink}`}
-              className={styles.copyrightText}>
+              className={styles.copyrightText}
+            >
               Privacy Policy
             </Link>
             <p className={styles.copyrightText}>© {copiright}</p>
             <Link
               href={`${process.env.NEXT_PUBLIC_CURR_DOMAIN}${termslink}`}
-              className={styles.copyrightText}>
+              className={styles.copyrightText}
+            >
               Terms & Conditions
             </Link>
           </div>
@@ -638,22 +667,13 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
                 href={item.link}
                 target="_blank"
                 rel="noreferer"
-                className={`bg-ct ${styles.socialIcon} ${
-                  styles[item.type]
-                }`}></a>
+                className={`bg-ct ${styles.socialIcon} ${styles[item.type]}`}
+              ></a>
             ))}
         </div>
 
         <div className={styles.paperplaneContainer}>
-          <p className={styles.designedText}>
-            Proudly made and designed in Colombia by:
-          </p>
-          <div className={`${styles.paperplaneLog} bg-ct`}>
-            <a
-              href="https://paperplane.com.co"
-              target="_blank"
-              rel="noreferrer"></a>
-          </div>
+          <p className={styles.designedText}></p>
         </div>
       </footer>
     </>

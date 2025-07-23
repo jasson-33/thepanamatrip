@@ -1,12 +1,12 @@
-import { ColombianContext } from '@/context/ColombianContext';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useContext, useEffect } from 'react';
-import styles from './meet-home.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Atropos from 'atropos/react';
-import 'atropos/css';
+import { ColombianContext } from "@/context/ColombianContext";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useContext, useEffect } from "react";
+import styles from "./meet-home.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Atropos from "atropos/react";
+import "atropos/css";
 
 const MeetHome = ({ blogdata }) => {
   const { title, subtitle, blogs } = blogdata;
@@ -44,7 +44,7 @@ const MeetHome = ({ blogdata }) => {
           {blogs.map((blog, i) => (
             <Link
               href={
-                blog.typeurl === 'host'
+                blog.typeurl === "host"
                   ? `${process.env.NEXT_PUBLIC_CURR_DOMAIN}${blog.url}`
                   : blog.url
               }
@@ -53,36 +53,41 @@ const MeetHome = ({ blogdata }) => {
               data-aos-delay="0"
               target={blog.target}
               key={
-                typeof window !== 'undefined' ? window.crypto.randomUUID() : i
+                typeof window !== "undefined" ? window.crypto.randomUUID() : i
               }
-              className={`${styles.cardBlog} `}>
+              className={`${styles.cardBlog} `}
+            >
               <Atropos className={styles.atroposBlogCard} {...atroposProps}>
                 <div className={`bg-cv ${styles.imgCardBog}`}>
                   <Image
-                    src={blog.img.sizes ? blog.img.sizes.large : ''}
+                    src={blog.img.sizes ? blog.img.sizes.large : ""}
                     fill
                     alt="img-blog"
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
                 <p
                   data-atropos-offset="-.5"
-                  className={`${Bigola.className} ${styles.dateCardBlog}`}>
-                  {blog.hide_date ? '' : blog.date}
+                  className={`${Bigola.className} ${styles.dateCardBlog}`}
+                >
+                  {blog.hide_date ? "" : blog.date}
                 </p>
                 <h2
                   data-atropos-offset="-1.5"
-                  className={`${styles.titleCardBlog} ${Bigola.className}`}>
+                  className={`${styles.titleCardBlog} ${Bigola.className}`}
+                >
                   {blog.title}
                 </h2>
                 <p
                   data-atropos-offset="-2.5"
-                  className={styles.summaryCardBlog}>
+                  className={styles.summaryCardBlog}
+                >
                   {blog.summary}
                 </p>
                 <div
                   data-atropos-offset="1.5"
-                  className={`${styles.readMoreAnchor} ${Gotham_Bold.className}`}>
+                  className={`${styles.readMoreAnchor} ${Gotham_Bold.className}`}
+                >
                   <span className={`bg-ct ${styles.arrowRight}`}></span> Read
                   More
                 </div>
@@ -95,9 +100,11 @@ const MeetHome = ({ blogdata }) => {
           data-aos-duration="900"
           data-aos-delay="0"
           href={`${process.env.NEXT_PUBLIC_CURR_DOMAIN}/meet-colombia`}
-          className={`${styles.allArticles} ${styles.readMoreAnchor} ${Gotham_Bold.className}`}>
+          className={`${styles.allArticles} ${styles.readMoreAnchor} ${Gotham_Bold.className}`}
+        >
           <span
-            className={`bg-ct ${styles.arrowRight} ${Gotham_Bold.className}`}></span>
+            className={`bg-ct ${styles.arrowRight} ${Gotham_Bold.className}`}
+          ></span>
           <span className={styles.innerTextCtaBtn}>VIEW ALL ARTICLES</span>
         </Link>
       </div>

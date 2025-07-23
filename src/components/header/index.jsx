@@ -1,13 +1,13 @@
-import { ColombianContext } from '@/context/ColombianContext';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import styles from './header.module.css';
-import { useRouter } from 'next/navigation';
+import { ColombianContext } from "@/context/ColombianContext";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import styles from "./header.module.css";
+import { useRouter } from "next/navigation";
 
 const Header = ({ animate, setAnimate, categories, currCategory }) => {
   const [valueCities, setValueCities] = useState(currCategory);
-  const [valueCat, setValueCat] = useState('0');
+  const [valueCat, setValueCat] = useState("0");
   const { Bigola } = useContext(ColombianContext);
   const [isInHero, setIsInHero] = useState(true);
   const header = useRef(null);
@@ -31,14 +31,14 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
         }
       }
     };
-    window.addEventListener('scroll', switchHeader);
+    window.addEventListener("scroll", switchHeader);
     return () => {
-      window.removeEventListener('scroll', switchHeader);
+      window.removeEventListener("scroll", switchHeader);
     };
   }, []);
 
   const resetSelects = (reset) => {
-    if (reset === 'cities') {
+    if (reset === "cities") {
       setValueCities(citiesSelect.current.options[0].value);
       return;
     }
@@ -48,50 +48,53 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
   return (
     <header
       ref={header}
-      className={`${!isInHero ? styles.lightHeader : ''} ${
-        animate ? styles.activeHeader : ''
-      } ${styles.siteHeader} siteHeader`}>
+      className={`${!isInHero ? styles.lightHeader : ""} ${
+        animate ? styles.activeHeader : ""
+      } ${styles.siteHeader} siteHeader`}
+    >
       <div className={`${styles.containerHeader} container flex f-sb f-ac`}>
         <div className={`${styles.logo} bg-ct`}>
-          {pathname === '/' && (
+          {pathname === "/" && (
             <button
               onClick={() =>
                 setTimeout(() => {
                   setAnimate(false);
                 }, 500)
-              }>
+              }
+            >
               <Image
                 width={170}
                 height={35}
                 src={
                   !animate
-                    ? '/images/general/logo-red.png'
-                    : '/images/general/logo-white.png'
+                    ? "/images/general/logo-red.png"
+                    : "/images/general/logo-white.png"
                 }
                 alt="Site logo"
-                title="Colombian Trip"
+                title="The Panama Trip"
               />
             </button>
           )}
 
-          {pathname !== '/' && (
+          {pathname !== "/" && (
             <Link
               href="/"
               onClick={() =>
                 setTimeout(() => {
                   setAnimate(false);
                 }, 500)
-              }>
+              }
+            >
               <Image
                 width={170}
                 height={35}
                 src={
                   !animate
-                    ? '/images/general/logo-red.png'
-                    : '/images/general/logo-white.png'
+                    ? "/images/general/logo-red.png"
+                    : "/images/general/logo-white.png"
                 }
                 alt="Site logo"
-                title="Colombian Trip"
+                title="The Panama Trip"
               />
             </Link>
           )}
@@ -107,9 +110,10 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
                   onChange={(e) => {
                     setValueCities(e.target.value);
                     router.push(e.target.value);
-                    resetSelects('categories');
+                    resetSelects("categories");
                   }}
-                  className={`${styles.citiesSelect} ${Bigola.className} citiesSelect`}>
+                  className={`${styles.citiesSelect} ${Bigola.className} citiesSelect`}
+                >
                   <option value="/meet-colombia">Cities</option>
                   {categories.Cities.length > 0 &&
                     categories.Cities.map((category, i) => (
@@ -126,9 +130,10 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
                   onChange={(e) => {
                     setValueCat(e.target.value);
                     router.push(e.target.value);
-                    resetSelects('cities');
+                    resetSelects("cities");
                   }}
-                  className={`${styles.citiesSelect} ${Bigola.className}`}>
+                  className={`${styles.citiesSelect} ${Bigola.className}`}
+                >
                   <option value="/meet-colombia" selected>
                     Categories
                   </option>
@@ -145,9 +150,10 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
         </div>
         <div
           className={`${styles.burgerMenu} bg-ct ${
-            animate ? styles.opened : ''
+            animate ? styles.opened : ""
           }`}
-          onClick={() => toggleMenu()}></div>
+          onClick={() => toggleMenu()}
+        ></div>
       </div>
     </header>
   );
