@@ -63,8 +63,8 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
               }
             >
               <Image
-                width={170}
-                height={35}
+                width={200}
+                height={40}
                 src={
                   !animate
                     ? "/images/general/logo-red.png"
@@ -86,8 +86,8 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
               }
             >
               <Image
-                width={170}
-                height={35}
+                width={200}
+                height={40}
                 src={
                   !animate
                     ? "/images/general/logo-red.png"
