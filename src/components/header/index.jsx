@@ -84,6 +84,10 @@ const Header = ({ animate, setAnimate, categories, currCategory }) => {
                   setAnimate(false);
                 }, 500)
               }
+              style={{
+                display: "flex",
+                height: "100%",
+              }}
             >
               <Image
                 width={200}
