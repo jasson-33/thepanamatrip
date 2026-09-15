@@ -1,23 +1,24 @@
 export default function handler(req, res) {
-  const FormData = require('form-data');
   const body = req.body;
 
-  const formData = new FormData();
-  formData.append('first_name', body.first_name);
-  formData.append('last_name', body.last_name);
-  formData.append('email', body.email);
-  formData.append('duration', body.duration);
-  formData.append('number_travelers', body.number_travelers);
-  formData.append('date_month', body.date_month);
-  formData.append('date_day', body.date_day);
-  formData.append('date_year', body.date_year);
-  formData.append('style_travel', body.style_travel);
-  formData.append('style_accomodation', body.style_accomodation);
-  formData.append('style_destination', body.style_destination);
-  formData.append('message', body.message);
+  const params = new URLSearchParams();
+  params.append('first_name', body.first_name);
+  params.append('last_name', body.last_name);
+  params.append('email', body.email);
+  params.append('duration', body.duration);
+  params.append('number_travelers', body.number_travelers);
+  params.append('date_month', body.date_month);
+  params.append('date_day', body.date_day);
+  params.append('date_year', body.date_year);
+  params.append('style_travel', body.style_travel);
+  params.append('style_accomodation', body.style_accomodation);
+  params.append('style_destination', body.style_destination);
+  params.append('message', body.message);
+
   const options = {
     method: 'POST',
-    body: formData,
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: params,
   };
   fetch(
     `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/contact-footer-full`,

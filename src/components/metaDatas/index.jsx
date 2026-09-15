@@ -1,6 +1,10 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Metas = ({ metadata }) => {
+  const router = useRouter();
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_CURR_DOMAIN}${router.asPath}`;
+
   return (
     <>
       <Head>
@@ -16,13 +20,14 @@ const Metas = ({ metadata }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={metadata.siteurl} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta
           property="og:image"
           content={metadata.image.sizes ? metadata.image.sizes.large : ''}
         />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:site_name" content={metadata.sitename} />
+        <link rel="canonical" href={canonicalUrl} />
         <link
           rel="icon"
           href={

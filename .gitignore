@@ -27,7 +27,14 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
+.envrc
+
+# direnv cache
+.direnv/
 
 # vercel
 .vercel
 yarn.lock
+
+*.tlp

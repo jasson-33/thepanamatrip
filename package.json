@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "lint:all": "npm run lint:fix && npm run prettier:silent",
-    "prettier": "prettier --write .",
-    "prettier:silent": "prettier --write . --loglevel silent"
+    "dev": "bun run next dev",
+    "build": "bun run next build",
+    "start": "bun run next start",
+    "lint": "bun run next lint",
+    "lint:fix": "bun run next lint --fix",
+    "lint:all": "bun run lint:fix && bun run prettier:silent",
+    "prettier": "bun run prettier --write .",
+    "prettier:silent": "bun run prettier --write . --loglevel silent"
   },
   "dependencies": {
     "@cyriacbr/react-split-text": "^1.0.0",
