@@ -1,27 +1,27 @@
 import Metas from '@/components/metaDatas';
 import Hero from '@/components/hero';
-import LegalContent from '@/components/legalContent';
+import ConsciousTravel from '@/components/conscious-travel';
 import React from 'react';
 
-const privacy = ({ data }) => {
-  const { metacontent, hero, legalcontent } = data;
+const consciousTravel = ({ data }) => {
+  const { metacontent, hero, consciousTravel } = data;
 
   return (
     <>
       <Metas metadata={metacontent} />
       <Hero contentHero={hero} />
-      <LegalContent legalcontent={legalcontent} />
+      <ConsciousTravel consciousTravel={consciousTravel} />
     </>
   );
 };
 
 export async function getServerSideProps() {
   const content = await fetch(
-    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/privacy-data`
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/conscious-travel`
   );
   const data = await content.json();
   return {
     props: { data },
   };
 }
-export default privacy;
+export default consciousTravel;
