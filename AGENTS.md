@@ -8,7 +8,7 @@ A Next.js tourism/marketing website for The Panama Trip, showcasing Panama trave
 
 - **Framework**: Next.js 13.2.4 (Pages Router, not App Router)
 - **Runtime/Package Manager**: Bun 1.4.2 (via Nix)
-- **Node**: 26.8.2 (via Nix shell)
+- **Node**: 24.20.0 (via Nix shell)
 - **React**: 18.2.0
 - **Animations**: GSAP 3.x, AOS, Atropos 2.x, Popmotion, Stylefire
 - **Styling**: CSS Modules, custom local fonts (Bigola, Gotham Book/Bold)

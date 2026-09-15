@@ -77,7 +77,7 @@ bun run prettier     # Format all files
 
 - **Framework**: Next.js 13.2.4 (Pages router)
 - **Runtime**: Bun 1.4.2
-- **Node**: 26.8.2 (via Nix)
+- **Node**: 24.20.0 (via Nix)
 - **Animations**: GSAP, AOS, Atropos
 - **Styling**: CSS Modules, custom fonts (Bigola, Gotham)
 

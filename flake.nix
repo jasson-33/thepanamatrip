@@ -15,7 +15,7 @@
     {
       devShells = forAllSystems ({ pkgs }: {
         default = pkgs.mkShell {
-          buildInputs = with pkgs; [ bun nodejs_26 ];
+          buildInputs = with pkgs; [ bun nodejs_24 ];
           shellHook = ''
             echo "ThePanamaTrip App Development Environment"
             echo "Node: $(node --version)"
