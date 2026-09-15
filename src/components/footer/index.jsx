@@ -646,7 +646,7 @@ const Footer = ({ datafooter, changeLayout, noforms }) => {
               href={`${process.env.NEXT_PUBLIC_CURR_DOMAIN}${privacylink}`}
               className={styles.copyrightText}
             >
-              Privacy Policy
+              Conscious Travel
             </Link>
             <p className={styles.copyrightText}>© {copiright}</p>
             <Link
