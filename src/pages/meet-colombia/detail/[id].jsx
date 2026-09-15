@@ -71,7 +71,6 @@ export async function getServerSideProps(req) {
       notFound: true,
     };
   }
-  console.log(data);
   return { props: { data } };
 }
 
